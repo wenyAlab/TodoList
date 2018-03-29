@@ -3,10 +3,10 @@ var webpack = require('webpack');
 
 module.exports = {
     entry:{
-        app:'./src/index.js'
+        entry:'./src/index.js'
     },
     output:{
-        filename:'[name].js',
+        filename:'main.js',
         path:path.resolve(__dirname,'dist')
     },
     module:{
@@ -15,13 +15,19 @@ module.exports = {
                 test:/\.js$/,
                 exclude:/(node_midules)/,
                 loader:'babel-loader',
-                query:{
+                options:{
                     presets:['react','es2015']
                 }
             },
             {
                 test:/\.css$/,
                 loader:'style-loader!css-loader'
+            },
+            {
+                test:/\.(png|svg|jpg|gif)$/,
+                use:[
+                    'file-loader'
+                ]
             }
         ]
     },
