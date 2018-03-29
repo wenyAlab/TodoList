@@ -20,11 +20,16 @@
 .todolist-input-box{
     display: flex;
 }
+.todolist-input-box form {
+    width: 100%;
+}
 .todolist-box h2{
     text-align: center;
     margin-bottom: 20px;
 }
 .todolist-input{
+    width: 100%;
+
     flex: 1;
     height: 45px;
     outline: none;
@@ -69,16 +74,10 @@
     transition: color .3s ease;
 }
 .delete-task-btn{
-    border: 1px solid rgb(120, 121, 122);
     height: 20px;
     width: 20px;
     outline: none;
     background-color: transparent;
-    border-radius: 50%;
-    transition: backgroundColor,color .3s ease;
+    border: none;
 
-}
-.delete-task-btn:hover{
-    background-color: rgb(120, 121, 122);
-    color: #fff;
 }
