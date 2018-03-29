@@ -5,6 +5,7 @@ import Todolistinput from './todoListInput.js';
 
 import Todolist from './todoList.js';
 import '../style/todoList.css';
+import Close from '../img/close.svg'
 
 export default class Todolistitem extends React.Component{
     constructor(props){
@@ -48,7 +49,7 @@ export default class Todolistitem extends React.Component{
             <li className = 'todolist-item' style = {{display:this.state.display}}>
                 <input className = 'item-check-box' type = 'checkbox' checked = {this.state.checked} onChange = {this.handleCheckInput}/>
                 <span className = 'task-title' style = {{color:this.state.color,decoration:this.state.decoration}}>{this.props.list.task}</span>
-                <button className = 'delete-task-btn' onClick = {this.handleDelete}>rm</button>
+                <button className = 'delete-task-btn' onClick = {this.handleDelete}><img src = {Close}/></button>
             </li>
         )
     }

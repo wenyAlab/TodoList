@@ -21,8 +21,9 @@ export default class Todolistinput extends React.Component{
     render(){
         return(
             <div className = 'todolist-input-box'>
-                <input className = 'todolist-input' type = 'text' placeholder = 'input your todo task in here' ref = 'inputValue' />
-                <button className = 'save-btn' onClick = {this.addaNewTask}>add</button>
+                <form onSubmit = {this.addaNewTask}>
+                    <input className = 'todolist-input' type = 'text' placeholder = 'input your todo task in here' ref = 'inputValue' />
+                </form>
             </div>
         )
     }
